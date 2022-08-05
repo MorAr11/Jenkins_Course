@@ -1,5 +1,12 @@
 pipeline {
    agent any
+   environment {
+	ALL = 'all'
+	BASH = 'bash'
+	PYTHON = 'python'
+	C = 'c'
+	
+   }
 
    stages {
       stage('python') {
