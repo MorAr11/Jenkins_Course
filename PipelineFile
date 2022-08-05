@@ -1,5 +1,5 @@
 pipeline {
-   agent 'slave01'
+   agent {lable 'slave01'}
    environment {
 	ALL = 'all'
 	BASH = 'bash'
