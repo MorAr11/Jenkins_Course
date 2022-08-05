@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-    		all = "${PYTHON} ${BASH} ${C}"
+    		all = "${python} ${bash} ${c}"
 		python = python.py
 		bash = bash
 		c = c
