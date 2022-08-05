@@ -11,17 +11,17 @@ pipeline {
    stages {
       stage('python') {
          steps {
-            cat python
+            sh 'cat python'
          }
       }
 	  stage('bash') {
          steps {
-            cat bash
+            sh 'cat bash'
          }
       }
 	  stage('c') {
          steps {
-            cat c
+            sh 'cat c'
          }
       }
    }
