@@ -2,13 +2,12 @@ pipeline {
     agent any
     
     environment {
-    		all = "${python} ${bash} ${c}"
-		python = python.py
-		bash = bash
-		c = c
+		NAME = 'Vl'
+		LASTNAME = 'Lev'
 	}
     
         stages {
-            stage('Build') {   steps {   sh 'echo $all'   }   }   
+            stage('Build') {   steps {   sh 'echo $NAME $LASTNAME'   }   }   
         
+
 }
