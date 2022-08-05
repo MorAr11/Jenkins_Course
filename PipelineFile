@@ -1,7 +1,7 @@
 pipeline {
    agent {label 'slave01'}
    environment {
-	ALL = 'all'
+	ALL = 'python bash c'
 	BASH = 'bash'
 	PYTHON = 'python'
 	C = 'c'
