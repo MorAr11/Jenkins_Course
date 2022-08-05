@@ -13,20 +13,17 @@ pipeline {
          steps {
             sh '''cat $LANGUAGE
 	    	  env 
-		  exit 0
 	    '''
          }
       }
 	  stage('bash') {
          steps {
             sh 'cat $LANGUAGE'
-	    exit 0
          }
       }
 	  stage('c') {
          steps {
             sh 'cat $LANGUAGE'
-	    exit 0
          }
       }
    }
