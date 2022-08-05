@@ -11,8 +11,9 @@ pipeline {
    stages {
       stage('python') {
          steps {
-            sh 'cat $LANGUAGE'
-	    echo env
+            sh '''cat $LANGUAGE
+	    	  echo env 
+	    '''
          }
       }
 	  stage('bash') {
