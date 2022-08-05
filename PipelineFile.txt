@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    
+    environment {
+		NAME = 'Vl'
+		LASTNAME = 'Lev'
+	}
+    
+        stages {
+            stage('Build') {   steps {   sh 'echo $NAME $LASTNAME'   }   }   
+        
+
+        stage('Test') {
+            steps {
+                echo 'The Test is started'
+        }
+    }
+        stage('Deploy') {
+            steps {
+                echo 'The Deploy is started'
+        }
+    }
+        stage('Timeout') {
+            steps {
+                retry(3) {
+                    sh 'echo "I am not going to work :c"'
+            }
+        }
+    }
+        stage('Timeout3') {
+            steps {
+                retry(3) {
+                    sh 'echo hello'
+        }
+                timeout(time: 3, unit: 'SECONDS') {
+                    sh 'sleep 2'
+                }
+            }
+        }
+    }
+}
