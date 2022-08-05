@@ -2,19 +2,19 @@ pipeline {
    agent any
 
    stages {
-      stage('Build') {
+      stage('python') {
          steps {
-            echo 'The Build is started'
+            cat python
          }
       }
-	  stage('Test') {
+	  stage('bash') {
          steps {
-            echo 'The Test is started'
+            cat bash
          }
       }
-	  stage('Deploy') {
+	  stage('c') {
          steps {
-            echo 'The Deploy is started'
+            cat c
          }
       }
    }
