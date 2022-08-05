@@ -19,11 +19,13 @@ pipeline {
 	  stage('bash') {
          steps {
             sh 'cat $LANGUAGE'
+	    exit 0
          }
       }
 	  stage('c') {
          steps {
             sh 'cat $LANGUAGE'
+	    exit 0
          }
       }
    }
