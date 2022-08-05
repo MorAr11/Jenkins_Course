@@ -1,13 +1,21 @@
 pipeline {
-    agent any
-    
-    environment {
-		NAME = 'Vl'
-		LASTNAME = 'Lev'
-	}
-    
-        stages {
-            stage('Build') {   steps {   sh 'echo $NAME $LASTNAME'   }   }   
-        
+   agent any
 
+   stages {
+      stage('Build') {
+         steps {
+            echo 'The Build is started'
+         }
+      }
+	  stage('Test') {
+         steps {
+            echo 'The Test is started'
+         }
+      }
+	  stage('Deploy') {
+         steps {
+            echo 'The Deploy is started'
+         }
+      }
+   }
 }
