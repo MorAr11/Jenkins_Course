@@ -1,1 +1,1 @@
-print("Hello From Python")
+echo "Hello From Python"
