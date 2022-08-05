@@ -7,9 +7,10 @@ pipeline {
           steps {
 	        script {
 	 	    if (env.LANGUAGE == 'all') {
-                	sh 'cat c'
-                	sh 'cat python'
-                	sh 'cat bash'
+                	sh '''cat c
+			      cat python
+			      cat bash
+			'''
 	            }
 		    }
 		}            
