@@ -1,1 +1,1 @@
-echo "hello from C file"
+hello from C file
